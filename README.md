@@ -1,0 +1,4 @@
+QuickAd
+=======
+
+Projekt zespołowy
