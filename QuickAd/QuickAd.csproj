@@ -35,7 +35,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>C:\nhibernate\Required_Bins\Iesi.Collections.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NHibernate">
+      <HintPath>C:\nhibernate\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -162,12 +168,25 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdvertController.cs" />
+    <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AdverRate.cs" />
+    <Compile Include="Models\AdvertCategory.cs" />
+    <Compile Include="Models\Advertise.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\DBHelper.cs" />
+    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\EmailSenderService.cs" />
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\SessionFactory.cs" />
+    <Compile Include="Models\Teritory.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -284,6 +303,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\DBO\" />
+    <Folder Include="Views\Advert\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

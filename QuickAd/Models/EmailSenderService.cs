@@ -1,7 +1,9 @@
+
 using System;
-namespace Schemat obiektów logicznych {
+namespace QuickAd.Models
+{
 	public class EmailSenderService {
-		public void SendEmail(out Email email) {
+		public void SendEmail(Email email) {
 			throw new System.Exception("Not implemented");
 		}
 		private void Send() {

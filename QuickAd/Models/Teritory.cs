@@ -1,5 +1,6 @@
 using System;
-namespace Schemat obiektów logicznych {
+namespace QuickAd.Models
+{
 	public class Teritory {
 		private int id;
 		private String hash;
@@ -8,19 +9,19 @@ namespace Schemat obiektów logicznych {
 		public int GetId() {
 			return this.id;
 		}
-		public void SetId(out int id) {
+		public void SetId(int id) {
 			this.id = id;
 		}
 		public String GetHash() {
 			return this.hash;
 		}
-		public void SetHash(out String hash) {
+		public void SetHash(String hash) {
 			this.hash = hash;
 		}
 		public String GetName() {
 			return this.name;
 		}
-		public void SetName(out String name) {
+		public void SetName(String name) {
 			this.name = name;
 		}
 
