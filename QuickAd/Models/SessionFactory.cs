@@ -7,7 +7,7 @@ namespace QuickAd.Models
 		private static NHibernate.ISessionFactory sFactory;
 
 		private static void Init() {
-			throw new System.Exception("Not implemented");
+            throw new System.Exception("Not implemented");
 		}
 		private static NHibernate.ISessionFactory GetSessionFactory() {
 			throw new System.Exception("Not implemented");
