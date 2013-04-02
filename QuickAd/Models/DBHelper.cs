@@ -16,6 +16,19 @@ namespace QuickAd.Models
 			throw new System.Exception("Not implemented");
 		}
 
+	    public static string generateHash()
+	    {
+	        byte[] bytes;
+            Random r = new Random();
+	        String dateStamp = r.NextDouble().ToString() + DateTime.Now.ToString("s") + "hashedExtra";
+            bytes = new byte[dateStamp.Length];
+	        char[] chars = dateStamp.ToCharArray();
+            for(int i=0;i<dateStamp.Length;i++)
+            {
+                bytes[i] = (byte) chars[i] ;
+            }
+	        return System.Security.Cryptography.MD5.Create().ComputeHash(bytes).ToString();
+	    }
 	}
 
 }

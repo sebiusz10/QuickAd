@@ -54,7 +54,20 @@ namespace QuickAd.Controllers
             try
             {
                 // TODO: Add insert logic here
-
+                Advertise advertise = new Advertise();
+                advertise.SetAddinationalInfo(collection["addinationInfo"] as string);
+                advertise.SetAdvertCategory(DBHelper.FindOne<AdvertCategory>(id: Int32.Parse(collection["category"])));
+                advertise.SetContent(collection["content"]);
+                advertise.SetHash(DBHelper.generateHash());
+                advertise.SetPrice(Double.Parse(collection["price"]));
+                advertise.SetTitle(collection["title"] as string);
+                DateTime validity = new DateTime();
+                validity.AddDays(20d);
+                advertise.SetValidity(validity);
+                advertise.SetVisibleToOthers(true);
+                advertise.SetVisits(0);
+                DBHelper.SaveOrUpdate(advertise);
+                
                 return RedirectToAction("Index");
             }
             catch
@@ -82,8 +95,17 @@ namespace QuickAd.Controllers
             try
             {
                 // TODO: Add update logic here
-                Advertise model = DBHelper.FindOne<Advertise>(id);
+//                Advertise model = DBHelper.FindOne<Advertise>(id);
+                Advertise advertise = DBHelper.FindOne<Advertise>(id);
 
+                advertise.SetAddinationalInfo(collection["addinationInfo"] as string);
+                advertise.SetAdvertCategory(DBHelper.FindOne<AdvertCategory>(id: Int32.Parse(collection["category"])));
+                advertise.SetContent(collection["content"]);
+                advertise.SetHash(DBHelper.generateHash());
+                advertise.SetPrice(Double.Parse(collection["price"]));
+                advertise.SetTitle(collection["title"] as string);
+                DBHelper.SaveOrUpdate(advertise);
+                
                 return RedirectToAction("Index");
             }
             catch
