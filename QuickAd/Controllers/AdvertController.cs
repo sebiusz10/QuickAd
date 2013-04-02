@@ -62,7 +62,7 @@ namespace QuickAd.Controllers
                 advertise.SetPrice(Double.Parse(collection["price"]));
                 advertise.SetTitle(collection["title"] as string);
                 DateTime validity = new DateTime();
-                validity.AddDays(20d);
+                validity.AddDays(20);
                 advertise.SetValidity(validity);
                 advertise.SetVisibleToOthers(true);
                 advertise.SetVisits(0);
