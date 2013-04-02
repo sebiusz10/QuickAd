@@ -9,18 +9,7 @@
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
-
-    <fieldset>
-        <legend>Advertise</legend>
-        <p>@Html.TextBoxFor(title => Model.GetTitle())</p>
-        <p>@Html.TextAreaFor(content => Model.GetContent())</p>
-        <p>@Html.TextBoxFor(price => Model.GetPrice())</p>
-@*        <p>@Html.TextBoxFor()</p>*@
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-
-    </fieldset>
+    @Html.RenderPartial("InFormFields");
 }
 
 <div>
