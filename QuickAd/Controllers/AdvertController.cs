@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using System.Web.UI.WebControls;
+using QuickAd.Models;
 namespace QuickAd.Controllers
 {
     public class AdvertController : Controller
@@ -13,6 +14,14 @@ namespace QuickAd.Controllers
 
         public ActionResult Index()
         {
+            List<Advertise> adverts = DBHelper.GetAll<Advertise>();
+            ViewBag.List = adverts;
+            return View();
+        }
+
+        public ActionResult Index(FormCollection collection)
+        {
+             
             return View();
         }
 
@@ -21,6 +30,8 @@ namespace QuickAd.Controllers
 
         public ActionResult Details(int id)
         {
+            Advertise model = DBHelper.FindOne<Advertise>(id);
+            ViewBag.Model = model;
             return View();
         }
 
@@ -29,6 +40,8 @@ namespace QuickAd.Controllers
 
         public ActionResult Create()
         {
+            Advertise model = new Advertise();
+            ViewBag.Model = model;
             return View();
         }
 
@@ -55,6 +68,8 @@ namespace QuickAd.Controllers
 
         public ActionResult Edit(int id)
         {
+            Advertise model = DBHelper.FindOne<Advertise>(id);
+            ViewBag.Model = model;
             return View();
         }
 
@@ -67,6 +82,7 @@ namespace QuickAd.Controllers
             try
             {
                 // TODO: Add update logic here
+                Advertise model = DBHelper.FindOne<Advertise>(id);
 
                 return RedirectToAction("Index");
             }
@@ -81,7 +97,9 @@ namespace QuickAd.Controllers
 
         public ActionResult Delete(int id)
         {
-            return View();
+            DBHelper.Delete(DBHelper.FindOne<Advertise>(id));
+
+            return RedirectToAction("Index");
         }
 
         //
@@ -93,8 +111,8 @@ namespace QuickAd.Controllers
             try
             {
                 // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
+                Delete(id);
+//                return RedirectToAction("Index");
             }
             catch
             {
