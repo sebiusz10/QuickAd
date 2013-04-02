@@ -1,12 +1,36 @@
-﻿@{
+﻿@model QuickAd.Models.AdvertCategory
+@using QuickAd.Models
+@model QuickAd.Models.Teritory
+@{
     ViewBag.Title = "Home Page";
 }
 
 <section class="featured">
     <div class="content-wrapper">
         <h1>Strona główna</h1>
+        @Html.BeginForm("Index","Advert",FormMethod.Post){
+        <div class="big-select">
+            <select name="territory">
+                @foreach (Teritory t in ViewBag.Teritory)
+                {
+                    <option value="@t.GetId()">@t.GetName()</option>
+                }
+            </select>
+        </div>
+        
+        <div class="big-select">
+            <select name="territory">
+                @foreach (AdvertCategory c in ViewBag.Categories)
+                {
+                    <option value="@c.GetId()">@c.GetName()</option>
+                }
+            </select>
+        </div>
+        <input type="submit" value="Szukaj">
+        }
     </div>
 </section>
+
 @*@section featured {
     <section class="featured">
         <div class="content-wrapper">
