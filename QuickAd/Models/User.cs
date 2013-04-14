@@ -9,12 +9,26 @@ namespace QuickAd.Models {
 		public String Street;
 		public int BuildingNumber;
 		public int HomeNumber;
-		public int Sex;
+		public Sex Sex;
 		public String Password;
 		public String PhoneNumber;
 		public String Hash;
 		public int Privillage;
 		public int Id;
+	    public int IdSex;
+
+        public virtual string VfirstName {get { return this.FirstName; } set { this.FirstName = value; }}
+        public virtual string VlastName {get { return this.LastName; } set { this.LastName = value; }}
+        public virtual string Vemail {get { return this.Email; } set { this.Email = value; }}
+        public virtual DateTime VdateOfBirth {get { return this.DateOfBirth; } set { this.DateOfBirth = value; }}
+        public virtual string Vcity {get { return this.City; } set { this.City = value; }}
+        public virtual string Vstreet {get { return this.Street; } set { this.Street = value; }}
+        public virtual int VbuildingNumber {get { return this.BuildingNumber; } set { this.BuildingNumber = value; }}
+        public virtual int VhomeNumber {get { return this.HomeNumber; } set { this.HomeNumber = value; }}
+        public virtual int VidSex {get { return this.IdSex; } set { this.IdSex = value; }}
+        public virtual string Vpassword {get { return this.Password; } set { this.Password = value; }}
+        public virtual string VphoneNumber {get { return this.PhoneNumber; } set { this.PhoneNumber = value; }}
+        public virtual int Vprivillage { get { return this.Privillage; } set { this.Privillage = value; } } 
 
 		public String GetFirstName() {
 			return this.FirstName;
@@ -58,10 +72,10 @@ namespace QuickAd.Models {
 		public void SetBuildingNumber(int buildingNumber) {
 			this.BuildingNumber = buildingNumber;
 		}
-		public GetAttribute() {
+		public void GetAttribute() {
 			throw new System.Exception("Not implemented");
 		}
-		public void SetAttribute( attribute) {
+		public void SetAttribute(int attribute) {
 			throw new System.Exception("Not implemented");
 		}
 		public int GetHomeNumber() {
@@ -70,10 +84,10 @@ namespace QuickAd.Models {
 		public void SetHomeNumber(int homeNumber) {
 			this.HomeNumber = homeNumber;
 		}
-		public int GetSex() {
+		public Sex GetSex() {
 			return this.Sex;
 		}
-		public void SetSex(int sex) {
+		public void SetSex(Sex sex) {
 			this.Sex = sex;
 		}
 		public String GetPassword() {

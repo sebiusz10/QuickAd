@@ -1,9 +1,12 @@
 using System;
 namespace QuickAd.Models {
-	public class Teritory {
+	public class Territory {
 		public int Id;
 		public String Hash;
 		public String Name;
+
+        public virtual int Vid { get { return this.Id; } set { this.Id = value; } }
+        public virtual string Vname { get { return this.Name; } set { this.Name = value; } }
 
 		public int GetId() {
 			return this.Id;

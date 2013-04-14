@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--nHibernate mapping-->
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="QuickAd" namespace="QuickAd.Models">
+  
+  <!--Class AdvertRate-->
+  <class name="AdvertRate" lazy="true" table="AdvertiseRates" schema="public">
+    <id name="Vid" column="id_rate">
+      <generator class="sequence">
+        <param name="sequence">"rate_id_rate_seq"</param>
+      </generator>
+    </id>
+    <property name="Vrate" column="rate" not-null="true"/>
+    <property name="VidAdvertise" column="id_advertise" not-null="true"/>
+  </class>
+  
+  <!--Class AdvertCategory-->
+  <class name="AdvertCategory" lazy="true" table="AdvertiseCategories" schema="public">
+    <id name="Vid" column="id_advert_category">
+      <generator class="sequence">
+        <param name="sequence">"category_id_category_seq"</param>
+      </generator>
+    </id>
+    <property name="Vname" column="name" not-null="true" />
+  </class>
+  
+  <!--Class Advertise-->
+  <class name="Advertise" lazy="true" table="advertises" schema="public">
+    <id name="Vid" column="id_advertise">
+      <generator class="sequence">
+        <param name="sequence">"advert_id_advert_seq"</param>
+      </generator>
+    </id>
+    <property name="Vtitle" column="title" not-null="true"/>
+    <property name="VidUser" column="id_user" not-null="true"/>
+    <property name="Vcontent" column="content"/>
+    <property name="Vvalidity" column="validity" type="DateTime"/> 
+    <property name="Vvisits" column="visits"/>
+    <property name="Vprice" column="price" not-null="true"/>
+    <property name="VadditionalInfo" column="additional_info"/>
+    <property name="VvisibleToOthers" column="visible_to_others" not-null="true"/>
+    <property name="VidAdvertCategory" column="id_advert_category" not-null="true"/>
+    <property name="VidTerritory" column="id_territory" not-null="true"/>
+  </class>
+  
+  <!--Class Comment-->
+  <class name="Comment" table="Comments" lazy="true" schema="public">
+    <id name="Vid" column="id_comment">
+      <generator class="sequence">
+        <param name="sequence">"comment_id_comment_seq"</param>
+      </generator>
+    </id>
+    <property name="Vtitle" column="title"/>
+    <property name="Vcontent" column="content" not-null="true"/>
+    <property name="VcreatedDate" column="created_date" type ="DateTime" not-null="true"/>
+    <property name="VidAdvertise" column="id_advertise" not-null="true"/>
+  </class>
+  
+  <!--Class Email-->
+  <class name="Email" table="Emails" lazy="true" schema="public">
+    <id name="Vid" column="id_email">
+      <generator class="sequence">
+        <param name="sequence">"email_id_email_seq"</param>
+      </generator>
+    </id>
+    <property name="VidSenderUser" column="id_sender_user" not-null="true"/>
+    <property name="VidRecipUser" column="id_recipent_user" not-null="true"/>
+    <property name="Vcontent" column="content"/>
+    <property name="Vtitle" column="title"/>
+    <property name="VsendDate" column="send_date" type ="DateTime"/>
+    <property name="VisSend" column="is_send" not-null="true"/>
+    <property name="VcreatedDate" column="created_date" type ="DateTime"/>
+  </class>
+  
+  <!--Class Image-->
+  <class name="Image" table="Images" schema="public" lazy="true">
+    <id name="Vid" column="id_image">
+      <generator class="sequence">
+        <param name="sequence">"image_id_image_seq"</param>
+      </generator>
+    </id>
+    <property name="Vpath" column="path" not-null="true"/>
+    <property name="Vextension" column="extension"/>
+    <property name="VisPrivate" column="is_private" not-null="true"/>
+    <property name="VidAdvertise" column="id_advertise"/>
+  </class>
+  
+  <!--Class Territory-->
+  <class name="Territory" table="territories" schema="public" lazy="true">
+    <id name="Vid" column="id_territory">
+      <generator class="sequence">
+        <param name="sequence">"territory_id_territory_seq"</param>
+      </generator>
+    </id>
+    <property name="vName" column="name" not-null ="true"/>
+  </class>
+  
+  <!--Class Sex-->
+  <class name="Sex" table="Sex" schema="public" lazy="true">
+    <id name="Vid" column="id_territory">
+      <generator class="sequence">
+        <param name="sequence">"sex_id_sex_seq"</param>
+      </generator>
+    </id>
+    <property name="vName" column="name" not-null ="true"/>
+  </class>
+
+  <!--Class User-->
+  <class name="Sex" table="Sex" schema="public" lazy="true">
+    <id name="Vid" column="id_territory">
+      <generator class="sequence">
+        <param name="sequence">"sex_id_sex_seq"</param>
+      </generator>
+    </id>
+    <property name="VfirstName" column="first_name" not-null ="true"/>
+    <property name="VlastName" column="last_name" not-null ="true"/>
+    <property name="Vemail" column="email" not-null ="true"/>
+    <property name="VdateOfBirth" column="date_of_birth" type="DateTime"/>
+    <property name="Vcity" column="city"/>
+    <property name="Vstreet" column="street"/>
+    <property name="VbuildingNumber" column="building_number"/>
+    <property name="VhomeNumber" column="home_number"/>
+    <property name="VidSex" column="building_number" not-null="true"/>
+    <property name="Vpassword" column="password" not-null="true"/>
+    <property name="VphoneNumber" column="phone_number"/>
+    <property name="Vprivillage" column="privillage"/>
+  </class>
+  
+</hibernate-mapping>
+

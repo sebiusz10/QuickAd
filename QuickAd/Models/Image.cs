@@ -5,11 +5,19 @@ namespace QuickAd.Models {
 		public int Id;
 		public String Hash;
 		public String Extension;
+	    public bool IsPrivate;
+	    public int IdAdvert;
 
-		public void GetImagePath() {
+        public virtual int Vid {get { return this.Id; } set { this.Id = value; }}
+        public virtual string Vpath {get { return this.ImagePath; } set { this.ImagePath = value; }}
+        public virtual string Vextension {get { return this.Extension; } set { this.Extension = value; }}
+        public virtual bool VisPrivate {get { return this.IsPrivate; } set { this.IsPrivate = value; }}
+        public virtual int VidAdvertise {get { return this.IdAdvert; } set { this.IdAdvert = value; }}
+
+		public string GetImagePath() {
 			return this.ImagePath;
 		}
-		public void SetImagePath(object imagePath) {
+		public void SetImagePath(string imagePath) {
 			this.ImagePath = imagePath;
 		}
 		public int GetId() {

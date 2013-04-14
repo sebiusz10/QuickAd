@@ -10,6 +10,21 @@ namespace QuickAd.Models {
 		public bool VisibleToOthers;
 		public String Hash;
 		public int Id;
+	    public int IdUser;
+	    public int IdAdvertCategory;
+	    public int IdTerritory;
+
+        public virtual int Vint {get { return this.Id; } set { this.Id = value; }}
+        public virtual string Vtitle {get { return this.Title; } set { this.Title = value; }}
+        public virtual int VidUser {get { return this.IdUser; } set { this.IdUser = value; }}
+        public virtual string Vcontent {get { return this.Content; } set { this.Content = value; }}
+        public virtual DateTime Vvalidity {get { return this.Validity; } set { this.Validity = value; }}
+        public virtual int Vvisits {get { return this.Visits; } set { this.Visits = value; }}
+        public virtual double Vprice {get { return this.Price; } set { this.Price = value; }}
+        public virtual string VadditionalInfo {get { return this.AddinationalInfo; } set { this.AddinationalInfo = value; }}
+        public virtual bool VvisibleToOthers {get { return this.VisibleToOthers; } set { this.VisibleToOthers = value; }}
+        public virtual int VidAdvertCategry {get { return this.IdAdvertCategory; } set { this.IdAdvertCategory = value; }}
+        public virtual int VidIdTerritory {get { return this.IdTerritory; } set { this.IdTerritory = value; }}
 
 		public String GetTitle() {
 			return this.Title;
@@ -86,16 +101,16 @@ namespace QuickAd.Models {
 		public void IncrementVisitsCount() {
 			throw new System.Exception("Not implemented");
 		}
-		public GetAttribute() {
+		public void GetAttribute() {
 			throw new System.Exception("Not implemented");
 		}
-		public void SetAttribute( attribute) {
+		public void SetAttribute(int attribute) {
 			throw new System.Exception("Not implemented");
 		}
 
 		private Advertise advertise2;
 		private AdvertCategory advertCategory;
-		private Teritory teritory;
+		private Territory teritory;
 		private Comment[] comments;
 		private Image[] images;
 		private Image image;

@@ -12,7 +12,7 @@ namespace QuickAd.Controllers
         public ActionResult Index()
         {
             ViewBag.Categories = DBHelper.GetAll<AdvertCategory>();
-            ViewBag.Regions = DBHelper.GetAll<Teritory>();
+            ViewBag.Regions = DBHelper.GetAll<Territory>();
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
             return View();

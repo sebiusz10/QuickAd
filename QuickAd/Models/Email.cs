@@ -9,6 +9,17 @@ namespace QuickAd.Models {
 		public int Id;
 		public String Hash;
 		public DateTime DateCreated;
+	    public int IdSender;
+	    public int IdRecipent;
+
+        public virtual int Vid {get { return this.Id; } set { this.Id = value; }}
+        public virtual int VidSenderUser {get { return this.IdSender; } set { this.IdSender = value; }}
+        public virtual int VidRecipent {get { return this.IdRecipent; } set { this.IdRecipent = value; }}
+        public virtual string Vcontent {get { return this.Content; } set { this.Content = value; }}
+        public virtual string Vtitle {get { return this.Title; } set { this.Title = value; }}
+        public virtual DateTime VsendDate {get { return this.DateSend; } set { this.DateSend = value; }}
+        public virtual bool VisSend {get { return this.IsSend; } set {this.IsSend = value;}}
+        public virtual DateTime VcreatedDate {get { return this.DateCreated; } set { this.DateCreated = value; }}
 
 		public User GetSenderUser() {
 			return this.SenderUser;

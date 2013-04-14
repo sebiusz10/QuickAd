@@ -6,6 +6,13 @@ namespace QuickAd.Models {
 		public String Title;
 		public String Content;
 		public DateTime CreatedAt;
+	    public int IdAdvert;
+
+        public virtual int Vid { get { return this.Id; } set { this.Id = value; } }
+        public virtual string Vtitle {get { return this.Title; } set { this.Title = value; }}
+        public virtual string Vcontent {get {return this.Content;} set { this.Content = value; }}
+        public virtual DateTime VcreatedDate {get { return this.CreatedAt; } set { this.CreatedAt = value; }}
+        public virtual int VidAdvertise {get { return this.IdAdvert; } set { this.IdAdvert = value; }}
 
 		public int GetId() {
 			return this.Id;
