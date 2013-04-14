@@ -1,45 +1,43 @@
 using System;
-namespace QuickAd.Models
-{
+namespace QuickAd.Models {
 	public class Comment {
-		private int id;
-		private String hash;
-		private String title;
-		private String content;
-		private DateTime createdAt;
+		public int Id;
+		public String Hash;
+		public String Title;
+		public String Content;
+		public DateTime CreatedAt;
 
 		public int GetId() {
-			return this.id;
+			return this.Id;
 		}
 		public void SetId(int id) {
-			this.id = id;
+			this.Id = id;
 		}
 		public String GetHash() {
-			return this.hash;
+			return this.Hash;
 		}
 		public void SetHash(String hash) {
-			this.hash = hash;
+			this.Hash = hash;
 		}
 		public String GetTitle() {
-			return this.title;
+			return this.Title;
 		}
 		public void SetTitle(String title) {
-			this.title = title;
+			this.Title = title;
 		}
 		public String GetContent() {
-			return this.content;
+			return this.Content;
 		}
 		public void SetContent(String content) {
-			this.content = content;
+			this.Content = content;
 		}
 		public DateTime GetCreatedAt() {
-			return this.createdAt;
+			return this.CreatedAt;
 		}
 		public void SetCreatedAt(DateTime createdAt) {
-			this.createdAt = createdAt;
+			this.CreatedAt = createdAt;
 		}
 
-		private Advertise advertise;
 
 	}
 

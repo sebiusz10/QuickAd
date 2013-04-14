@@ -1,60 +1,69 @@
 using System;
 namespace QuickAd.Models {
 	public class Advertise {
-		private String title;
-		private String content;
-		private DateTime validity;
-		private int visits;
-		private double price;
-		private String addinationalInfo;
-		private bool visibleToOthers;
-		private int id;
-		private String hash;
+		public String Title;
+		public String Content;
+		public DateTime Validity;
+		public int Visits;
+		public double Price;
+		public String AddinationalInfo;
+		public bool VisibleToOthers;
+		public String Hash;
+		public int Id;
 
 		public String GetTitle() {
-			return this.title;
+			return this.Title;
 		}
 		public void SetTitle(String title) {
-			this.title = title;
+			this.Title = title;
 		}
 		public String GetContent() {
-			return this.content;
+			return this.Content;
 		}
 		public void SetContent(String content) {
-			this.content = content;
+			this.Content = content;
 		}
 		public DateTime GetValidity() {
-			return this.validity;
+			return this.Validity;
 		}
 		public void SetValidity(DateTime validity) {
-			this.validity = validity;
+			this.Validity = validity;
 		}
 		public int GetVisits() {
-			return this.visits;
+			return this.Visits;
 		}
 		public void SetVisits(int visits) {
-			this.visits = visits;
+			this.Visits = visits;
 		}
 		public double GetPrice() {
-			return this.price;
+			return this.Price;
 		}
 		public void SetPrice(double price) {
-			this.price = price;
+			this.Price = price;
 		}
 		public String GetAddinationalInfo() {
-			return this.addinationalInfo;
+			return this.AddinationalInfo;
 		}
 		public void SetAddinationalInfo(String addinationalInfo) {
-			this.addinationalInfo = addinationalInfo;
+			this.AddinationalInfo = addinationalInfo;
 		}
 		public bool GetVisibleToOthers() {
-			return this.visibleToOthers;
+			return this.VisibleToOthers;
 		}
 		public void SetVisibleToOthers(bool visibleToOthers) {
-			this.visibleToOthers = visibleToOthers;
+			this.VisibleToOthers = visibleToOthers;
 		}
-		public bool IsValid() {
-			throw new System.Exception("Not implemented");
+		public String GetHash() {
+			return this.Hash;
+		}
+		public void SetHash(String hash) {
+			this.Hash = hash;
+		}
+		public int GetId() {
+			return this.Id;
+		}
+		public void SetId(int id) {
+			this.Id = id;
 		}
 		public AdvertCategory GetCategory() {
 			throw new System.Exception("Not implemented");
@@ -74,28 +83,24 @@ namespace QuickAd.Models {
 		public void DeleteAllGalleryImages() {
 			throw new System.Exception("Not implemented");
 		}
-		public int GetId() {
-			return this.id;
+		public void IncrementVisitsCount() {
+			throw new System.Exception("Not implemented");
 		}
-		public void SetId(int id) {
-			this.id = id;
+		public GetAttribute() {
+			throw new System.Exception("Not implemented");
 		}
-		public String GetHash() {
-			return this.hash;
-		}
-		public void SetHash(String hash) {
-			this.hash = hash;
-		}
-		public void IncrementVisitisCount() {
+		public void SetAttribute( attribute) {
 			throw new System.Exception("Not implemented");
 		}
 
+		private Advertise advertise2;
 		private AdvertCategory advertCategory;
-		private Image image;
 		private Teritory teritory;
-		private Image[] images;
 		private Comment[] comments;
-		private AdverRate[] adverRates;
+		private Image[] images;
+		private Image image;
+
+		private Advertise advertise;
 
 	}
 

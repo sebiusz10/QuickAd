@@ -1,111 +1,104 @@
 using System;
-namespace QuickAd.Models
-{
+namespace QuickAd.Models {
 	public class User {
-		private String firstName;
-		private String lastName;
-		private String email;
-		private DateTime dateOfBirth;
-		private String city;
-		private String street;
-		private int buildingNumber;
-		private int homeNumber;
-		private int sex;
-		private String password;
-		private String phoneNumber;
-		private int id;
-		private String hash;
-		private int privillage;
+		public String FirstName;
+		public String LastName;
+		public String Email;
+		public DateTime DateOfBirth;
+		public String City;
+		public String Street;
+		public int BuildingNumber;
+		public int HomeNumber;
+		public int Sex;
+		public String Password;
+		public String PhoneNumber;
+		public String Hash;
+		public int Privillage;
+		public int Id;
 
 		public String GetFirstName() {
-			return this.firstName;
+			return this.FirstName;
 		}
 		public void SetFirstName(String firstName) {
-			this.firstName = firstName;
+			this.FirstName = firstName;
 		}
 		public String GetLastName() {
-			return this.lastName;
+			return this.LastName;
 		}
 		public void SetLastName(String lastName) {
-			this.lastName = lastName;
+			this.LastName = lastName;
 		}
 		public String GetEmail() {
-			return this.email;
+			return this.Email;
 		}
 		public void SetEmail(String email) {
-			this.email = email;
+			this.Email = email;
 		}
 		public DateTime GetDateOfBirth() {
-			return this.dateOfBirth;
+			return this.DateOfBirth;
 		}
 		public void SetDateOfBirth(DateTime dateOfBirth) {
-			this.dateOfBirth = dateOfBirth;
+			this.DateOfBirth = dateOfBirth;
 		}
 		public String GetCity() {
-			return this.city;
+			return this.City;
 		}
 		public void SetCity(String city) {
-			this.city = city;
+			this.City = city;
 		}
 		public String GetStreet() {
-			return this.street;
+			return this.Street;
 		}
 		public void SetStreet(String street) {
-			this.street = street;
+			this.Street = street;
 		}
 		public int GetBuildingNumber() {
-			return this.buildingNumber;
+			return this.BuildingNumber;
 		}
 		public void SetBuildingNumber(int buildingNumber) {
-			this.buildingNumber = buildingNumber;
+			this.BuildingNumber = buildingNumber;
+		}
+		public GetAttribute() {
+			throw new System.Exception("Not implemented");
+		}
+		public void SetAttribute( attribute) {
+			throw new System.Exception("Not implemented");
 		}
 		public int GetHomeNumber() {
-			return this.homeNumber;
+			return this.HomeNumber;
 		}
 		public void SetHomeNumber(int homeNumber) {
-			this.homeNumber = homeNumber;
+			this.HomeNumber = homeNumber;
 		}
 		public int GetSex() {
-			return this.sex;
+			return this.Sex;
 		}
 		public void SetSex(int sex) {
-			this.sex = sex;
+			this.Sex = sex;
 		}
 		public String GetPassword() {
-			return this.password;
+			return this.Password;
 		}
 		public void SetPassword(String password) {
-			this.password = password;
+			this.Password = password;
 		}
 		public String GetPhoneNumber() {
-			return this.phoneNumber;
+			return this.PhoneNumber;
 		}
 		public void SetPhoneNumber(String phoneNumber) {
-			this.phoneNumber = phoneNumber;
-		}
-		public void GetAttribute() {
-			throw new System.Exception("Not implemented");
-		}
-		public void SetAttribute(object attribute) {
-			throw new System.Exception("Not implemented");
-		}
-		public int GetId() {
-			return this.id;
-		}
-		public void SetId(int id) {
-			this.id = id;
+			this.PhoneNumber = phoneNumber;
 		}
 		public String GetHash() {
-			return this.hash;
+			return this.Hash;
 		}
 		public void SetHash(String hash) {
-			this.hash = hash;
+			this.Hash = hash;
 		}
 		public int GetPrivillage() {
-			return this.privillage;
+			return this.Privillage;
 		}
 		public void SetPrivillage(int privillage) {
-			this.privillage = privillage;
+			this.Privillage = privillage;
 		}
 		public bool IsAdmin() {
 			throw new System.Exception("Not implemented");
@@ -113,6 +106,18 @@ namespace QuickAd.Models
 		public void IsOwner(Advertise adv) {
 			throw new System.Exception("Not implemented");
 		}
+		public int GetId() {
+			return this.Id;
+		}
+		public void SetId(int id) {
+			this.Id = id;
+		}
+		public Email CreateEmailTo(User user) {
+			throw new System.Exception("Not implemented");
+		}
+
+		private Email[] emails;
+		private Advertise[] advertises;
 
 	}
 

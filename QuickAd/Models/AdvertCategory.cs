@@ -1,31 +1,29 @@
 using System;
-namespace QuickAd.Models
-{
+namespace QuickAd.Models {
 	public class AdvertCategory {
-		private int id;
-		private String hash;
-		private String name;
+		public int Id;
+		public String Hash;
+		public String Name;
 
 		public int GetId() {
-			return this.id;
+			return this.Id;
 		}
 		public void SetId(int id) {
-			this.id = id;
+			this.Id = id;
 		}
 		public String GetHash() {
-			return this.hash;
+			return this.Hash;
 		}
 		public void SetHash(String hash) {
-			this.hash = hash;
+			this.Hash = hash;
 		}
 		public String GetName() {
-			return this.name;
+			return this.Name;
 		}
 		public void SetName(String name) {
-			this.name = name;
+			this.Name = name;
 		}
 
-		private Advertise advertise;
 
 	}
 

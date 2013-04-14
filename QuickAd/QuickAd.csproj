@@ -188,6 +188,7 @@
     <Compile Include="Models\Advertise.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\DBHelper.cs" />
+    <Compile Include="Models\DBO\SessionFactory.cs" />
     <Compile Include="Models\Email.cs" />
     <Compile Include="Models\EmailSenderService.cs" />
     <Compile Include="Models\Image.cs" />
@@ -272,6 +273,7 @@
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -311,8 +313,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\DBO\" />
-    <Folder Include="Views\Advert\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -322,6 +322,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\ColumnRightLogged.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Advert\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Advert\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Advert\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Advert\InFormFields.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

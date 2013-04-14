@@ -1,16 +1,14 @@
-
 using System;
-namespace QuickAd.Models
-{
+namespace QuickAd.Models {
 	public class EmailSenderService {
-		public void SendEmail(Email email) {
+		public static bool SendEmail(Email email) {
 			throw new System.Exception("Not implemented");
 		}
-		private void Send() {
+		private static void Send() {
 			throw new System.Exception("Not implemented");
 		}
 
-		private Email email;
+		private Email[] emails;
 
 	}
 

@@ -1,42 +1,34 @@
 using System;
-namespace QuickAd.Models
-{
+namespace QuickAd.Models {
 	public class Image {
-		private String imagePath;
-		private String hash;
-		private int id;
-		private String extension;
-		private bool isPrivate;
+		public String ImagePath;
+		public int Id;
+		public String Hash;
+		public String Extension;
 
-		public String GetImagePath() {
-			return this.imagePath;
+		public void GetImagePath() {
+			return this.ImagePath;
 		}
-		public void SetImagePath(String imagePath) {
-			this.imagePath = imagePath;
-		}
-		public String GetHash() {
-			return this.hash;
-		}
-		public void SetHash(String hash) {
-			this.hash = hash;
+		public void SetImagePath(object imagePath) {
+			this.ImagePath = imagePath;
 		}
 		public int GetId() {
-			return this.id;
+			return this.Id;
 		}
 		public void SetId(int id) {
-			this.id = id;
+			this.Id = id;
+		}
+		public String GetHash() {
+			return this.Hash;
+		}
+		public void SetHash(String hash) {
+			this.Hash = hash;
 		}
 		public String GetExtension() {
-			return this.extension;
+			return this.Extension;
 		}
 		public void SetExtension(String extension) {
-			this.extension = extension;
-		}
-		public bool GetIsPrivate() {
-			return this.isPrivate;
-		}
-		public void SetIsPrivate(bool isPrivate) {
-			this.isPrivate = isPrivate;
+			this.Extension = extension;
 		}
 
 

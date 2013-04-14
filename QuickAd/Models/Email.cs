@@ -1,72 +1,62 @@
 using System;
-namespace QuickAd.Models
-{
+namespace QuickAd.Models {
 	public class Email {
-		private User senderUser;
-		private String content;
-		private String titleString;
-		private DateTime dateSend;
-		private bool isSend;
-		private int id;
-		private String hash;
-		private DateTime dateCreated;
+		public User SenderUser;
+		public String Content;
+		public String Title;
+		public DateTime DateSend;
+		public bool IsSend;
+		public int Id;
+		public String Hash;
+		public DateTime DateCreated;
 
 		public User GetSenderUser() {
-			return this.senderUser;
+			return this.SenderUser;
 		}
 		public void SetSenderUser(User senderUser) {
-			this.senderUser = senderUser;
+			this.SenderUser = senderUser;
 		}
 		public String GetContent() {
-			return this.content;
+			return this.Content;
 		}
 		public void SetContent(String content) {
-			this.content = content;
+			this.Content = content;
 		}
-		public String GetTitleString() {
-			return this.titleString;
+		public String GetTitle() {
+			return this.Title;
 		}
-		public void SetTitleString(String titleString) {
-			this.titleString = titleString;
+		public void SetTitle(String title) {
+			this.Title = title;
 		}
 		public DateTime GetDateSend() {
-			return this.dateSend;
+			return this.DateSend;
 		}
 		public void SetDateSend(DateTime dateSend) {
-			this.dateSend = dateSend;
+			this.DateSend = dateSend;
 		}
 		public bool GetIsSend() {
-			return this.isSend;
+			return this.IsSend;
 		}
 		public void SetIsSend(bool isSend) {
-			this.isSend = isSend;
-		}
-		public Email(User recivier) {
-			throw new System.Exception("Not implemented");
+			this.IsSend = isSend;
 		}
 		public int GetId() {
-			return this.id;
+			return this.Id;
 		}
 		public void SetId(int id) {
-			this.id = id;
+			this.Id = id;
 		}
 		public String GetHash() {
-			return this.hash;
+			return this.Hash;
 		}
 		public void SetHash(String hash) {
-			this.hash = hash;
-		}
-		public void GetAttribute() {
-			throw new System.Exception("Not implemented");
-		}
-		public void SetAttribute(object attribute) {
-			throw new System.Exception("Not implemented");
+			this.Hash = hash;
 		}
 		public DateTime GetDateCreated() {
-			return this.dateCreated;
+			return this.DateCreated;
 		}
 		public void SetDateCreated(DateTime dateCreated) {
-			this.dateCreated = dateCreated;
+			this.DateCreated = dateCreated;
 		}
 
 
