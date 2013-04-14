@@ -1,18 +1,22 @@
 using System;
-namespace QuickAd.Models {
-	public class Advertise {
-		public String Title;
-		public String Content;
-		public DateTime Validity;
-		public int Visits;
-		public double Price;
-		public String AddinationalInfo;
-		public bool VisibleToOthers;
-		public String Hash;
-		public int Id;
-	    public int IdUser;
-	    public int IdAdvertCategory;
-	    public int IdTerritory;
+namespace QuickAd.Models 
+{
+	public class Advertise 
+    {
+		private String Title;
+		private String Content;
+		private DateTime Validity;
+        private int Visits;
+        private double Price;
+        private String AddinationalInfo;
+        private bool VisibleToOthers;
+        private String Hash;
+        private int Id;
+        private int IdUser;
+        private int IdAdvertCategory;
+        private int IdTerritory;
+
+        #region ORM Properties
 
         public virtual int Vint {get { return this.Id; } set { this.Id = value; }}
         public virtual string Vtitle {get { return this.Title; } set { this.Title = value; }}
@@ -26,89 +30,64 @@ namespace QuickAd.Models {
         public virtual int VidAdvertCategry {get { return this.IdAdvertCategory; } set { this.IdAdvertCategory = value; }}
         public virtual int VidIdTerritory {get { return this.IdTerritory; } set { this.IdTerritory = value; }}
 
-		public String GetTitle() {
-			return this.Title;
-		}
-		public void SetTitle(String title) {
-			this.Title = title;
-		}
-		public String GetContent() {
-			return this.Content;
-		}
-		public void SetContent(String content) {
-			this.Content = content;
-		}
-		public DateTime GetValidity() {
-			return this.Validity;
-		}
-		public void SetValidity(DateTime validity) {
-			this.Validity = validity;
-		}
-		public int GetVisits() {
-			return this.Visits;
-		}
-		public void SetVisits(int visits) {
-			this.Visits = visits;
-		}
-		public double GetPrice() {
-			return this.Price;
-		}
-		public void SetPrice(double price) {
-			this.Price = price;
-		}
-		public String GetAddinationalInfo() {
-			return this.AddinationalInfo;
-		}
-		public void SetAddinationalInfo(String addinationalInfo) {
-			this.AddinationalInfo = addinationalInfo;
-		}
-		public bool GetVisibleToOthers() {
-			return this.VisibleToOthers;
-		}
-		public void SetVisibleToOthers(bool visibleToOthers) {
-			this.VisibleToOthers = visibleToOthers;
-		}
-		public String GetHash() {
-			return this.Hash;
-		}
-		public void SetHash(String hash) {
-			this.Hash = hash;
-		}
-		public int GetId() {
-			return this.Id;
-		}
-		public void SetId(int id) {
-			this.Id = id;
-		}
-		public AdvertCategory GetCategory() {
-			throw new System.Exception("Not implemented");
-		}
-		public void SetAdvertCategory(AdvertCategory advertCat) {
-			throw new System.Exception("Not implemented");
-		}
-		public Image[] GetGalleryImages() {
-			throw new System.Exception("Not implemented");
-		}
-		public void SetGalleryImages(Image[] galleryImages) {
-			throw new System.Exception("Not implemented");
-		}
-		public void AddGalleryImage(Image img) {
-			throw new System.Exception("Not implemented");
-		}
-		public void DeleteAllGalleryImages() {
-			throw new System.Exception("Not implemented");
-		}
-		public void IncrementVisitsCount() {
-			throw new System.Exception("Not implemented");
-		}
-		public void GetAttribute() {
-			throw new System.Exception("Not implemented");
-		}
-		public void SetAttribute(int attribute) {
+        #endregion
+
+        #region Properties
+
+        public String GetTitle() {return this.Title;}
+		public void SetTitle(String title) {this.Title = title;}
+
+		public String GetContent() {return this.Content;}
+		public void SetContent(String content) {this.Content = content;}
+
+		public DateTime GetValidity() {return this.Validity;}
+		public void SetValidity(DateTime validity) {this.Validity = validity;}
+
+		public int GetVisits() {return this.Visits;}
+		public void SetVisits(int visits) {this.Visits = visits;}
+
+		public double GetPrice() {return this.Price;}
+		public void SetPrice(double price) {this.Price = price;}
+
+		public String GetAddinationalInfo() {return this.AddinationalInfo;}
+		public void SetAddinationalInfo(String addinationalInfo) {this.AddinationalInfo = addinationalInfo;}
+
+		public bool GetVisibleToOthers() {return this.VisibleToOthers;}
+		public void SetVisibleToOthers(bool visibleToOthers) {this.VisibleToOthers = visibleToOthers;}
+
+		public String GetHash() {return this.Hash;}
+		public void SetHash(String hash) {this.Hash = hash;}
+
+		public int GetId() {return this.Id;}
+		public void SetId(int id) {this.Id = id;}
+
+		public AdvertCategory GetCategory() {throw new System.Exception("Not implemented");}
+		public void SetAdvertCategory(AdvertCategory advertCat) {throw new System.Exception("Not implemented");}
+
+		public Image[] GetGalleryImages() {throw new System.Exception("Not implemented");}
+		public void SetGalleryImages(Image[] galleryImages) {throw new System.Exception("Not implemented");}
+
+        public void GetAttribute() {throw new System.Exception("Not implemented");}
+        public void SetAttribute(int attribute) {throw new System.Exception("Not implemented");}
+
+        #endregion
+
+        public void AddGalleryImage(Image img)
+        {
 			throw new System.Exception("Not implemented");
 		}
 
-		private Advertise advertise2;
+		public void DeleteAllGalleryImages() 
+        {
+			throw new System.Exception("Not implemented");
+		}
+
+		public void IncrementVisitsCount()
+        {
+			throw new System.Exception("Not implemented");
+		}
+
+        private Advertise advertise2;
 		private AdvertCategory advertCategory;
 		private Territory teritory;
 		private Comment[] comments;
